@@ -1,0 +1,15 @@
+.lato-font{
+    font-family: "Lato", sans-serif;
+}
+.active{
+    width: 200px;
+    height: 80px;
+    border:  1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    padding: 24px;
+
+}
+.adobt-hover:hover {
+    background-color: #03cbd51a;
+    border-color: #0831341a ;
+}

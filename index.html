@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/index.css">
+    <script
+      src="https://kit.fontawesome.com/1cc74fee55.js"
+      crossorigin="anonymous"></script>
+
+    <title>Pet Adobtation Platform 🐾</title>
+  </head>
+  <body class="lato-font">
+    <header class="container mx-auto px-6 py-4">
+      <nav class="flex justify-between navbar">
+        <div class="flex lg:gap-4 gap-1">
+          <img
+            class="lg:w-[25px] lg:h-[25px] w-[15px] h-[15px]"
+            src="./images/logo.webp"
+            alt />
+          <h2 class="font-bold lg:text-[32px] text-[20px]">Peddy</h2>
+        </div>
+        <div class="text-[#817c7c] flex lg:gap-5 gap-2">
+          <p>Home</p>
+          <p>Shop</p>
+          <p>Contact</p>
+        </div>
+        <div>
+          <img
+            class="lg:w-[56px] lg:h-[56px] w-[30px] h-[30px] object-cover"
+            src="./images/person.png"
+            alt />
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 mt-12">
+      <!-- title -->
+      <section class="text-center">
+        <h3 class="text-[24px] font-bold">
+          <span class="text-[#5a595999]">Bringing Families Together</span> ❤️‍🔥
+        </h3>
+        <h1 class="lg:text-[72px] text-[40px] font-[900]">
+          Your Path to Adoption <br />
+          Starts Here
+        </h1>
+        <p class="pt-3 pb-6">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking <br />
+          at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+        <button class="btn text-white text-[20px] bg-[#0E7A81] font-[700]" >
+          <a href="#main-sec-id">View More</a>
+        </button>
+      </section>
+
+      <!-- pet photo -->
+      <section class="mt-20">
+        <div class="flex justify-center items-center">
+          <img src="./images/pet.webp" alt />
+        </div>
+      </section>
+
+      <!-- abopt your best friend  -->
+      <section id="main-sec-id">
+        <div class="text-center mt-20">
+          <h1 class="text-[40px] font-[900]">Adopt Your Best Friend</h1>
+          <p class="text-[#131313B3] pt-4">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a <br />
+            page when looking at its layout. The point of using Lorem Ipsum is
+            that it has a.
+          </p>
+        </div>
+        <!-- pet button -->
+        <div
+          id="pet-categories"
+          class="mt-16 md:flex justify-between grid grid-cols-2 gap-4">
+          
+        </div>
+
+        <!-- best deal for u -->
+        <div class="mt-16 flex justify-between navbar">
+          <h2 class="md:text-[24px] text-[18px] font-[600] md:font-[900]">Best Deal For you</h2>
+          <button id="sort-button" onclick="sortByPrice()" class="btn bg-[#0E7A81] md:text-[20px] font-[700] text-white">
+            Sort by Price
+          </button>
+        </div>
+      </section>
+
+      <!-- all pet data -->
+       <div id="spine-div-id" class="text-center min-h-[500px]">
+        <span  class="loading loading-bars loading-lg mt-24"></span>
+      </div>
+       
+      <div id="petAllData-id" class="hidden">
+      <div class="md:flex justify-between mt-12 gap-6">
+        <div class="border-solid border-2 rounded-lg px-4 py-4">
+          <div id="pet-data-id" class="grid md:grid-cols-3 grid-cols-1 gap-6">
+
+            
+          </div>
+        </div>
+        <div class="border-solid border-2 rounded-lg px-4 py-4 md:w-[352px] mt-4 md:mt-0">
+          <div id="pet-img-container" class="grid grid-cols-2 gap-4">
+
+
+            
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- modal -->
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button id="showModalData" onclick="customModal.showModal()">open modal</button> -->
+      <dialog id="customModal" class="modal modal-middle">
+        <div class="modal-box">
+          <div id="modal-content-id" class="modal-content">
+
+
+          </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn w-[460px] bg-[#0E7A811A] text-[#0E7A81] border-solid border-[#63d1d9]">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- modal 2 for adobt -->
+      <dialog id="customModal2" class="modal modal-middle">
+        <div id="modal-content-id2" class="modal-box">
+          <div class="modal-content">
+            <div class="text-center py-6">
+              <img class="w-24 ml-[180px]" src="./images/handshake.png"/>
+              <h1 class="font-[900] text-[40px]">Congrates!</h1>
+              <p>Adoptation Process is Start For your Pet</p>
+            </div>
+          </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!--if there is a button in form, it will close the modal -->
+              <div class="md:mr-[200px] mr-[120px]">
+                <span class="countdown font-mono text-6xl">
+                  <span class="font-bold" style="--value:3;"></span>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+    </main>
+
+    <footer class="bg-black text-white">
+      <div class="container mx-auto px-6 mt-12 py-4 pb-8">
+        <div class="md:flex justify-between">
+          <div class="mt-6">
+            <div class="navbar flex gap-4">
+              <img class="w-[25px] h-[25px]" src="./images/logo.webp" alt />
+              <h2 class="text-[32px] font-900">Peddy</h2>
+            </div>
+            <div class>
+              <p class="pb-2 text-[#FFFFFFE6]">
+                Location: av. Washington 165, NY CA 54003
+              </p>
+              <p class="pb-2 text-[#FFFFFFE6]">Phone: +31 85 964 47 25</p>
+              <p class="pb-2 text-[#FFFFFFE6]">Email: info@yourdomain.com</p>
+              <p class="pb-2 text-[#FFFFFFE6]">
+                Openings hours: 9.00 AM - 5.00 PM
+              </p>
+            </div>
+            <div class="flex gap-4">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-[18px] font-[700] pb-2">Useful Links</h3>
+            <p class="pb-2 text-[#FFFFFF99]">Home</p>
+            <p class="pb-2 text-[#FFFFFF99]">About Us</p>
+            <p class="pb-2 text-[#FFFFFF99]">Animals</p>
+            <p class="pb-2 text-[#FFFFFF99]">Foundation</p>
+            <p class="pb-2 text-[#FFFFFF99]">Contact</p>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-[18px] font-[700] pb-2">Drop a Message</h3>
+            <input
+              type="text"
+              class="grow w-[240px] text-[#FFFFFF99] py-3 px-2 bg-slate-900 rounded-lg"
+              placeholder="Enter your email" />
+            <br />
+            <button
+              class="btn w-[240px] bg-[#0E7A81] text-[20px] font-[700] mt-4 border-none text-white">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="./JS/index.js"></script>
+  </body>
+</html>
