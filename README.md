@@ -19,4 +19,4 @@ This is a pet adoption platform where users can browse and adopt pets. I use API
 - **Object Destructuring** 
 
 ## Live Link of the Project
-**Link :** https://assignment-no-6.netlify.app/
+**Link :** https://peddy-pet-adoptation-platform.netlify.app/
